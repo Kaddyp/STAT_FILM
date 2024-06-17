@@ -1,0 +1,29 @@
+<!-- component -->
+ 
+<section class="grid min-h-screen px-8 py-2 place-items-center">
+  <div class="container grid grid-cols-1 gap-8 my-auto lg:grid-cols-1">
+    
+    <div class="relative flex-col bg-clip-border rounded-xl bg-transparent text-gray-700 shadow-none grid gap-2 item sm:grid-cols-2">
+      <div class="relative bg-clip-border rounded-xl overflow-hidden bg-white text-gray-700 shadow-lg m-0">
+        {{ assets container="assets" limit="1"}}
+            <img src="{{featured_image}}" alt="{{ alt }}" alt="Loading.." class="object-cover w-full" style="height: 28em;"/>
+        {{ /assets }}
+      </div>
+      <div class="p-6 px-2 sm:pr-6 sm:pl-4">
+        <p class="block antialiased font-sans text-sm font-light leading-normal text-inherit mb-4 !font-semibold">
+            {{title}}
+        </p>
+        <p class="block antialiased font-sans text-base leading-relaxed text-inherit mb-8 font-normal !text-gray-500">
+            {{bard}}
+        </p>
+        <div class="flex items-center gap-4">            
+          <div>
+            <p class="block antialiased font-sans text-base font-light leading-relaxed text-blue-gray-900 mb-0.5 !font-semibold">{{author:name}}</p>
+            <p class="block antialiased font-sans text-sm leading-normal text-gray-700 font-normal">{{date}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+</section>

@@ -1,0 +1,30 @@
+title: SignIn
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: email
+            field:
+              input_type: email
+              type: text
+              display: Email
+          -
+            handle: password
+            field:
+              input_type: password
+              type: text
+              display: Password
+  sidebar:
+    display: Sidebar
+    sections:
+      - {  }

@@ -1,0 +1,9 @@
+super: true
+name: edgeAdmin
+avatar: logo.png
+id: 1ff1df29-e1cd-472c-976a-ad58db175f32
+password_hash: $2y$12$Lal4KN7rGpQrDJBZAMZs3O7qRrMqNoRN81f/XtZWh6QydsESH1hui
+preferences:
+  assets:
+    assets:
+      mode: grid

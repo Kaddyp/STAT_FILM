@@ -1,0 +1,69 @@
+title: Movie
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: author
+            field:
+              max_items: 1
+              type: users
+              display: Author
+              validate:
+                - required
+          -
+            handle: bard
+            field:
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+                - codeblock
+              remove_empty_nodes: false
+              type: bard
+              display: Bard
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: featured_image
+            field:
+              container: assets
+              type: assets
+              display: 'Featured Image'
+              max_files: 1
+              mode: grid
+              always_save: true
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required

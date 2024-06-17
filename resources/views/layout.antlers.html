@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ title ?? site:name }}</title>
+        {{ vite src="resources/js/site.js|resources/css/site.css" }}
+    </head>
+    <body class="bg-gray-100 font-sans leading-normal text-gray-800">
+        <!-- https://tailblocks.cc/ -->
+        <header class="text-gray-600 body-font">
+            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+              <a href="/" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">                
+                <span class="ml-3 text-xl">Edge Stat Film</span>
+              </a>
+              <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+                {{ nav:collection:pages include_home="true"}}
+                  <a href="{{ url }}" class="mr-5 hover:text-gray-900">{{ title }}</a>
+                {{ /nav:collection:pages }}
+
+              </nav>
+      
+              <!-- <button class="text-white bg-blue-500 border-0 py-2 px-3 mx-2 focus:outline-none hover:bg-blue-600 rounded text-lg">
+                <a href="/login">Sign In</a>
+              </button>
+              <button class="text-white bg-indigo-500 border-0 py-2 px-3 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                <a href="/register">Sign Up</a>
+              </button> -->
+            
+            </div>
+          </header>
+
+
+        <div class="mx-auto max-w-6xl items-center justify-center">
+            {{ template_content }}
+        </div>
+    </body>
+</html>
